@@ -1,1 +1,1 @@
-web: gunicorn 'bak.wsgi'
+web: gunicorn 'basseac.wsgi'
