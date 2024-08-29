@@ -117,9 +117,9 @@
                     </div>
 
                     <div class="">
-                      <a href="{% url 'Ratestaxes' %}" class="nav-link" data-bs-toggle="">Rates & Taxes</a>
-                     
-                      </div>
+                        <a href="{% url 'Ratestaxes' %}" class="nav-link" data-bs-toggle="">Rates & Taxes</a>
+                       
+                        </div>
 
 
                     <div class="nav-item dropdown">
@@ -148,15 +148,15 @@
 
 
 <!-- Page Header Start -->
-<div class="partners-header page-header wow fadeIn" data-wow-delay="0.1s" id="header">
+<div class="contact-header page-header wow fadeIn" data-wow-delay="0.1s" id="header">
 <div class="container">
             <h1 class="typed-text-output display-3 text-white animated slideInRight"></h1>
-            <div class="typed-text d-none"><h6 class="display-1 text-white mb-5 animated slideInRight" id="font"> National Partners</h6></div>
+            <div class="typed-text d-none"><h6 class="display-1 text-white mb-5 animated slideInRight" id="font"> Words of The People of Basse</h6></div>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb animated slideInRight mb-0">
                     <li class="breadcrumb-item"><a href="{% url 'Index' %}">Home</a></li>
-                    <li class="breadcrumb-item"><a href="{% url 'Partners' %}">Partners</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">National Partners</li>
+                    <li class="breadcrumb-item"><a href="{% url 'About' %}">About</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Testimonials</li>
                 </ol>
             </nav>
         </div>
@@ -164,251 +164,60 @@
 </div>
 <!-- Page Header End -->
 
-
- <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;"> <br><br><br>
-                <h1 class="display-5 mb-5">Meet The National Partners of Basse Area Council</h1>
+{% for post in posts %}
+    <!-- Testimonial Start -->
+   <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="fw-medium text-uppercase mb-2" id="colour">Testimonial</p>
+                <h1 class="display-5 mb-5">Words from the People of Basse</h1>
             </div>
-
-<!-- Partners Start -->
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
-      <div class="partner-container">
-        <a href="https://www.gambiaparticipates.org" class="partner-icon" target="_blank">
-          <img src="{% static 'img/gp-logo.png' %}" alt="Partner 1">
-        </a>
-        <h6 class="partner-name">Gambia Participates</h6>
-      </div>
-    </div>
-
-    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-      <div class="partner-container">
-        <a href="https://molgl.gov.gm/" class="partner-icon" target="_blank">
-          <img src="{% static 'img/mllg.png ' %}" alt="Partner 2">
-        </a>
-        <h6 class="partner-name">Ministry of Local Government</h6>
-      </div>
-    </div>
-
-    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-      <div class="partner-container">
-        <a href="https://www.facebook.com/PolisoMagazine/" class="partner-icon" target="_blank">
-          <img src="{% static 'img/police.png ' %}" alt="Partner 3">
-        </a>
-        <h6 class="partner-name">Gambia Police Force</h6>
-      </div>
-    </div>
-
-    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.7s">
-      <div class="partner-container">
-        <a href="https://www.gm-nhrc.org/" class="partner-icon" target="_blank">
-          <img src="{% static 'img/nhrc.png' %}" alt="Partner 4">
-        </a>
-        <h6 class="partner-name">NHR Commission</h6>
-      </div>
-    </div>
-
-    <!-- Next Row -->
-   <div class="container-fluid mt-5">
-  <div class="row">
-    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
-      <div class="partner-container">
-        <a href="https://nea.gm/" class="partner-icon" target="_blank">
-          <img src="{% static 'img/nea.png' %}" alt="Partner 1">
-        </a>
-        <h6 class="partner-name">National Environment Agency</h6>
-      </div>
-    </div>
-
-    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-      <div class="partner-container">
-        <a href="https://nawec.gm/" class="partner-icon" target="_blank">
-          <img src="{% static 'img/nawec.png' %}" alt="Partner 2">
-        </a>
-        <h6 class="partner-name">NAWEC</h6>
-      </div>
-    </div>
-
-    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-      <div class="partner-container">
-        <a href="https://nao.gm/" class="partner-icon" target="_blank">
-          <img src="{% static 'img/nao.png' %}" alt="Partner 3">
-        </a>
-        <h6 class="partner-name">National Audit Office</h6>
-      </div>
-    </div>
-
-    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.7s">
-      <div class="partner-container">
-        <a href="https://gcci.gm/" class="partner-icon" target="_blank">
-          <img src="{% static 'img/gcci.png' %}" alt="Partner 4">
-        </a>
-        <h6 class="partner-name">Chamber of Commerce</h6>
-      </div>
-    </div>
-
-  </div>
-</div>
- <!-- Next Row -->
-   <div class="container-fluid mt-5">
-  <div class="row">
-    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
-      <div class="partner-container">
-        <a href="https://www.giepa.gm/" class="partner-icon" target="_blank">
-          <img src="{% static 'img/giepa.png' %}" alt="Partner 1">
-        </a>
-        <h6 class="partner-name">GIEPA</h6>
-      </div>
-    </div>
-
-    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-      <div class="partner-container">
-        <a href="https://www.motwi.gov.gm/" class="partner-icon" target="_blank">
-          <img src="{% static 'img/nra.png' %}" alt="Partner 2">
-        </a>
-        <h6 class="partner-name">National Road Authority</h6>
-      </div>
-    </div>
-
-    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-      <div class="partner-container">
-        <a href="https://gppa.gm/" class="partner-icon" target="_blank">
-          <img src="{% static 'img/gppa.png' %}" alt="Partner 3">
-        </a>
-        <h6 class="partner-name">Public Procurement Authority</h6>
-      </div>
-    </div>
-
-    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.7s">
-      <div class="partner-container">
-        <a href="https://gppa.gm/" class="partner-icon" target="_blank">
-          <img src="{% static 'img/gppc.png' %}" alt="Partner 4">
-        </a>
-        <h6 class="partner-name">GPPC</h6>
-      </div>
-    </div>
-
-  </div>
-</div>
- <!-- Next Row -->
-   <div class="container-fluid mt-5">
-  <div class="row">
-    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
-      <div class="partner-container">
-        <a href="https://rootsproject.gm/" class="partner-icon" target="_blank">
-          <img src="{% static 'img/roots.png' %}" alt="Partner 1">
-        </a>
-        <h6 class="partner-name">ROOTS Project</h6>
-      </div>
-    </div>
-
-    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-      <div class="partner-container">
-        <a href="https://gcc.gm/" class="partner-icon" target="_blank">
-          <img src="{% static 'img/gccpc.png' %}" alt="Partner 2">
-        </a>
-        <h6 class="partner-name">GCCPC</h6>
-      </div>
-    </div>
-
-    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
-      <div class="partner-container">
-        <a href="https://www.sos-childrensvillages.org/where-we-help/africa/gambia" class="partner-icon" target="_blank">
-          <img src="{% static 'img/sos.png' %}" alt="Partner 3">
-        </a>
-        <h6 class="partner-name">SOS Gambia</h6>
-      </div>
-    </div>
-
-    <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.7s">
-      <div class="partner-container">
-        <a href="https://gamworks.gm/" class="partner-icon" target="_blank">
-          <img src="{% static 'img/gam-works.png' %}" alt="Partner 4">
-        </a>
-        <h6 class="partner-name">Gam works</h6>
-      </div>
-    </div>
-
-  </div>
-</div>
-</div>
-</div>
-<!-- Partners End -->
-
- <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;"> <br><br><br>
-                <p class="fw-medium text-uppercase mb-2" id="colour">Reach Out</p>
-                <h1 class="display-5 mb-5">Want to Partner with The Council ? Join Us in Building Strong Partnerships in Shapping Basse for the Better</h1>
-            </div>
-
-
-<div class="container mt-5 wow fadeInUp" data-wow-delay="0.5s" id="support">
-                    {% for message in messages %}
-                    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
-                        <strong>{{message}}</strong>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      {% endfor %}
-    <form action="/infor" method="POST"> {% csrf_token %}
-        <div class="row g-3 justify-content-center">
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="text" name="name" class="form-control inputs-effect" id="name" placeholder="Your Name">
-                    <label for="name">Your Name</label>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center">
+                    <div class="testimonial-img position-relative">
+                        <img class="img-fluid rounded-circle mx-auto mb-5" src="{% static 'img/testimonial-1.jpg' %}">
+                        <div class="btn-square rounded-circle">
+                            <i class="fa fa-quote-left text-white"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-text text-center rounded p-4">
+                        <p>{{post.words_teach}}</p>
+                        <h5 class="mb-1">{{post.Testim_name_teacher}}</h5>
+                        <span class="fst-italic">{{post.Description_teacher}}</span>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="email" name="email" class="form-control inputs-effect" id="email" placeholder="Your Email">
-                    <label for="email">Your Email</label>
+                <div class="testimonial-item text-center">
+                    <div class="testimonial-img position-relative">
+                        <img class="img-fluid rounded-circle mx-auto mb-5" src="{% static 'img/testimonial-2.jpg' %}">
+                        <div class="btn-square rounded-circle">
+                            <i class="fa fa-quote-left text-white"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-text text-center rounded p-4">
+                        <p>{{post.words_nurs}}</p>
+                        <h5 class="mb-1">{{post.Testim_nurs}}</h5>
+                        <span class="fst-italic">{{post.Description_nurs}}</span>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="text" name="organ" class="form-control inputs-effect" id="organization" placeholder="Organization Name">
-                    <label for="organization">Organization Name</label>
+
+                <div class="testimonial-item text-center">
+                    <div class="testimonial-img position-relative">
+                        <img class="img-fluid rounded-circle mx-auto mb-5" src="{% static 'img/testimonial-3.jpg' %}">
+                        <div class="btn-square rounded-circle">
+                            <i class="fa fa-quote-left text-white"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-text text-center rounded p-4">
+                        <p>{{post.words_busim}}</p>
+                        <h5 class="mb-1">{{post.Testim_busim}}</h5>
+                        <span class="fst-italic">{{post.Description_busim}}</span>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="tel" name="phone" class="form-control inputs-effect" id="phone" placeholder="Your Phone Number">
-                    <label for="phone">Your Phone Number</label>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="form-floating">
-                    <select name="select" class="form-select" id="button-update" aria-label="Partnership Interest">
-                        <option id="button-update" selected disabled>Select Partnership Interest</option>
-                        <option id="button-update" value="sponsorship" class="option" >Sponsorship</option>
-                        <option id="button-update" value="collaboration" class="option" class="option">Collaboration</option>
-                        <option id="button-update" value="donation" class="option">Donation</option>
-                        <option id="button-update" value="other" class="option">Other</option>
-                    </select>
-                    <label for="partnership-interest">Partnership Interest</label>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="form-floating">
-                    <textarea name="message" class="form-control inputs-effect" placeholder="Tell us more about your interest" id="message" style="height: 150px"></textarea>
-                    <label for="message">Additional Information</label>
-                </div>
-            </div>
-            <div class="col-12">
-                <button class="btn btn-primary py-3 px-5" id="button-update" type="submit">Send Message</button>
             </div>
         </div>
-    </form>
-</div>
-<br><br><br>
-<div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;"> <br><br><br>
-                <h1 class="display-5 mb-5">Explore Basse</h1>
-            </div>
-
-<iframe class="wow fadeInUp" data-wow-delay="0.1s" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7765.292016401651!2d-14.22235261648895!3d13.310039424409007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xeef83a2a967a7ff%3A0x197d5cb4f7ab4a89!2sBasse%20Area%20Council!5e0!3m2!1sen!2sgm!4v1695157686294!5m2!1sen!2sgm" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
-
+    </div>
+    <!-- Testimonial End -->
+        
  <!-- Banner Start -->
         <div class="banner wow zoomIn" data-wow-delay="0.1s">
             <div class="container">
@@ -418,7 +227,7 @@
                 </div>
                 <div class="container banner-text">
                     <p>
-                        Welcome to the heart of progress, where community thrives, and futures are built. The Basse Area Council is committed to empowering our diverse communities through sustainable development and shared growth. 
+                       {{post.banna_para1}} 
                     </p>
                     <a class="btn" href="{% url 'Contact' %}" >Be In Touch</a>
                 </div>
@@ -449,7 +258,7 @@
                     <a class="btn btn-link" href="{% url 'Services'%}">Our Services</a>
                     <a class="btn btn-link" href="{% url 'Publications'%}">Publications</a>
                     <a class="btn btn-link" href="{% url 'Council' %}">Council Members</a>
-                </div>
+                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">Business Hours</h5>
                     <p class="mb-1">Monday - Thursday</p>
@@ -471,7 +280,7 @@
         </div>
     </div>
     <!-- Footer End -->
-
+{% endfor %}
 
     <!-- Copyright Start -->
     <div class="container-fluid copyright bg-dark py-4">
@@ -481,7 +290,7 @@
         </div>
     </div>
     <div class="credit">
-      <p class="credit2"><b>Supported By: </b><a target="-blank" href="https://www.gambiaparticipates.org/"> <img class="credit-img" src="{% static 'img/gplogo.png' %}"></a> <a target="-blank" href="https://gm.usembassy.gov/"><img class="credit-img2" src="{% static 'img/US EMBASSY.jpg' %}"></a> </p>    </div>
+        <p class="credit2"><b>Supported By: </b><a target="-blank" href="https://www.gambiaparticipates.org/"> <img class="credit-img" src="{% static 'img/gplogo.png' %}"></a> <a target="-blank" href="https://gm.usembassy.gov/"><img class="credit-img2" src="{% static 'img/US EMBASSY.jpg' %}"></a> </p>    </div>
     </div>
 
 <script>
@@ -503,7 +312,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{% static 'lib/wow/wow.min.js' %}"></script>
-    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
     <script src="{% static 'lib/easing/easing.min.js' %}"></script>
     <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
     <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
@@ -512,7 +320,7 @@
     <script src="{% static 'lib/parallax/parallax.min.js' %}"></script>
     <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
     <script src="{% static 'lib/isotope/isotope.pkgd.min.js' %}"></script>
-   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script>
         function googleTranslateElementInit() {

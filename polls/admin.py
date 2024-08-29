@@ -15,6 +15,9 @@ admin.site.register(models.Staffs_of_Council)
 admin.site.register(models.Planing_and_Dev)
 admin.site.register(models.Budget_finance)
 admin.site.register(models.Rates_and_Taxes)
+admin.site.register(models.projects)
+admin.site.register(models.partnerUS)
+admin.site.register(models.IntpartnerUS)
 
 class AgricultureAdmin(admin.ModelAdmin):
      list_display=('title','content','featured_image')
@@ -39,9 +42,6 @@ class LandAdmin(admin.ModelAdmin):
      list_display=('title','content','featured_image')
 admin.site.register(models.Land,LandAdmin)
 
-class ProjectAdmin(admin.ModelAdmin):
-     list_display=('title','content','featured_image')
-admin.site.register(models.Project,ProjectAdmin)
 
 class PublicationAdmin(admin.ModelAdmin):
      list_display=('title','content','featured_image')

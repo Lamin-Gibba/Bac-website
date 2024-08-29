@@ -304,55 +304,63 @@
 
 
 <div class="container mt-5 wow fadeInUp" data-wow-delay="0.5s">
-    <form>
-        <div class="row g-3 justify-content-center">
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="text" class="form-control inputs-effect" id="name" placeholder="Your Name">
-                    <label for="name">Your Name</label>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="email" class="form-control inputs-effect" id="email" placeholder="Your Email">
-                    <label for="email">Your Email</label>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="text" class="form-control inputs-effect" id="organization" placeholder="Organization Name">
-                    <label for="organization">Organization Name</label>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="tel" class="form-control inputs-effect" id="phone" placeholder="Your Phone Number">
-                    <label for="phone">Your Phone Number</label>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="form-floating">
-                    <select class="form-select" id="partnership-interest" aria-label="Partnership Interest">
-                        <option selected disabled>Select Partnership Interest</option>
-                        <option value="sponsorship" class="option">Sponsorship</option>
-                        <option value="collaboration" class="option" class="option">Collaboration</option>
-                        <option value="donation" class="option">Donation</option>
-                        <option value="other" class="option">Other</option>
-                    </select>
-                    <label for="partnership-interest">Partnership Interest</label>
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="form-floating">
-                    <textarea class="form-control inputs-effect" placeholder="Tell us more about your interest" id="message" style="height: 150px"></textarea>
-                    <label for="message">Additional Information</label>
-                </div>
-            </div>
-            <div class="col-12">
-                <button class="btn btn-primary py-3 px-5" id="button-update" type="submit">Send Message</button>
-            </div>
-        </div>
-    </form>
+  {% for message in messages %}
+  <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+      <strong>{{message}}</strong>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endfor %}
+<form action="/intPart" method="POST"> {% csrf_token %}
+<div class="row g-3 justify-content-center">
+<div class="col-md-6">
+<div class="form-floating">
+  <input type="text" name="name" class="form-control inputs-effect" id="name" placeholder="Your Name">
+  <label for="name">Your Name</label>
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-floating">
+  <input type="email" name="email" class="form-control inputs-effect" id="email" placeholder="Your Email">
+  <label for="email">Your Email</label>
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-floating">
+  <input type="text" name="organ" class="form-control inputs-effect" id="organization" placeholder="Organization Name">
+  <label for="organization">Organization Name</label>
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-floating">
+  <input type="tel" name="phone" class="form-control inputs-effect" id="phone" placeholder="Your Phone Number">
+  <label for="phone">Your Phone Number</label>
+</div>
+</div>
+<div class="col-12">
+<div class="form-floating">
+  <select name="select" class="form-select" id="button-update" aria-label="Partnership Interest">
+      <option id="button-update" selected disabled>Select Partnership Interest</option>
+      <option id="button-update" value="sponsorship" class="option" >Sponsorship</option>
+      <option id="button-update" value="collaboration" class="option" class="option">Collaboration</option>
+      <option id="button-update" value="donation" class="option">Donation</option>
+      <option id="button-update" value="other" class="option">Other</option>
+  </select>
+  <label for="partnership-interest">Partnership Interest</label>
+</div>
+</div>
+<div class="col-12">
+<div class="form-floating">
+  <textarea name="message" class="form-control inputs-effect" placeholder="Tell us more about your interest" id="message" style="height: 150px"></textarea>
+  <label for="message">Additional Information</label>
+</div>
+</div>
+<div class="col-12">
+<button class="btn btn-primary py-3 px-5" id="button-update" type="submit">Send Message</button>
+</div>
+</div>
+</form>
 </div>
 <br><br><br>
 <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;"> <br><br><br>
