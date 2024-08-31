@@ -1,5 +1,4 @@
 import os
-from juzmin import JAZZMIN_SETTINGS
 from pathlib import Path
 import dj_database_url
 
@@ -23,7 +22,6 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
-    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -164,4 +162,3 @@ MESSAGE_TAGS ={
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
-JAZZMIN_SETTINGS = JAZZMIN_SETTINGS 
