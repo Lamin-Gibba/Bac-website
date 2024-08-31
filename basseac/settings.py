@@ -22,6 +22,9 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    "admin_interface",
+    "colorfield",
+    #'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -65,6 +68,7 @@ WSGI_APPLICATION = 'basseac.wsgi.application'
 CSRF_TRUSTED_ORIGINS = [
     #'https://www.basse.gm',
     #'https://basse.gm',
+
     'https://www.bac-website-production.up.railway.app',
     'https://bac-website-production.up.railway.app',
 
@@ -159,6 +163,6 @@ MESSAGE_TAGS ={
     messages.ERROR:'danger'
 }
 
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-
