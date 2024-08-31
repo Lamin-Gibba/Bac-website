@@ -36,7 +36,9 @@ class Aboutus(models.Model):
 class Home(models.Model):
          bg_image_sli1 = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True) 
          bg_image_sli2 = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)         
-         bg_image_sli3 = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)         
+         bg_image_sli3 = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
+         bg_image_sli4 = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)         
+         
          desc_BAC = models.CharField(max_length=200, blank=True, null=True)
          content_BAC = models.TextField(blank=True,null=True)
          image_BAC = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
