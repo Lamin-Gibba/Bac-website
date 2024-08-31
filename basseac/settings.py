@@ -63,8 +63,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'basseac.wsgi.application'
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://www.basse.gm',
-    'https://basse.gm',
+    #'https://www.basse.gm',
+    #'https://basse.gm',
+    'https://www.bac-website-production.up.railway.app',
+    'https://bac-website-production.up.railway.app',
+
 ]
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
