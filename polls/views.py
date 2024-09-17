@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from .models import IntpartnerUS, partnerUS, ContactUS,Home,Aboutus,mission_and_vission,Powers_and_Functions,TestiM,chairman,councilmembers,ceo,Staffs_of_Council,Planing_and_Dev,Budget_finance,Rates_and_Taxes,projects
+from .models import land, community, health, agriculture, education, sanitation, IntpartnerUS, partnerUS, ContactUS,Home,Aboutus,mission_and_vission,Powers_and_Functions,testimonial,chairman,councilmembers,ceo,Staffs_of_Council,Planing_and_Dev,Budget_finance,Rates_and_Taxes,projects
 from django.contrib import messages
 
 
@@ -24,14 +24,16 @@ def Project(request):
     return render(request, 'Latest_News/project.html',{'posts':posts})
 
 def Testimonial(request):
-    posts = TestiM.objects.all()
+    posts = testimonial.objects.all()
     return render(request, 'About_page/testimonial.html',{'posts':posts})
     
 def Sanitation(request):
-    return render(request, 'Services/sanitatione.html')
+    posts = sanitation.objects.all()
+    return render(request, 'Services/sanitation.html',{'posts':posts})
 
 def Education(request):
-    return render(request, 'Services/education.html')
+    posts = education.objects.all()
+    return render(request, 'Services/education.html',{'posts':posts})
 
 def Team(request):
     return render(request, 'team.html')
@@ -40,19 +42,20 @@ def Error(request):
     return render(request, '404.html')
 
 def Health(request):
-    return render(request, 'Services/health.html')
+    posts = health.objects.all()
+    return render(request, 'Services/health.html',{'posts':posts})
 
 def Community(request):
-    return render(request, 'Services/community.html')
+    posts = community.objects.all()
+    return render(request, 'Services/community.html',{'posts':posts})
 
 def Agriculture(request):
-    return render(request, 'Services/agriculture.html')
-
-def Community(request):
-    return render(request, 'Services/community.html')
+    posts = agriculture.objects.all()
+    return render(request, 'Services/agriculture.html',{'posts':posts})
 
 def Lands(request):
-    return render(request, 'Services/lands.html')
+    posts = land.objects.all()
+    return render(request, 'Services/lands.html',{'posts':posts})
 
 def Mission(request):
      posts = mission_and_vission.objects.all()
@@ -103,8 +106,8 @@ def Intpartners(request):
 def Publications(request):
     return render(request, 'publication.html')
 
-def Sanitation(request):
-    return render(request, 'Services/sanitation.html')
+def Feature(request):
+    return render(request, 'Services/feature.html')
 
 
 #contact form side

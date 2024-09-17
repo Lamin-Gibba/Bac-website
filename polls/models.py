@@ -3,7 +3,6 @@ from django.core.validators import MaxValueValidator,MinValueValidator
 
 # Create your models here.
 class Aboutus(models.Model):
-         bg_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)          
          image_about = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
          content_stra_plan = models.TextField(blank=True,null=True)
          strplan1 = models.TextField(blank=True,null=True)
@@ -18,19 +17,18 @@ class Aboutus(models.Model):
          Councillors = models.FloatField(max_length=50, blank=True, null=True)
          vission = models.TextField(blank=True,null=True)
          mission = models.TextField(blank=True,null=True)
-         image_stragi = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
          Title_name_chairman = models.CharField(max_length=200, blank=True, null=True)
-         title_image_chairm = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
+         image_chairm = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
          Title_name_vice = models.CharField(max_length=200, blank=True, null=True)
-         title_image_vice = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
+         image_vice = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
          Title_name_ceo = models.CharField(max_length=200, blank=True, null=True)
-         title_image_ceo = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
+         image_ceo = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
          Title_name_finance = models.CharField(max_length=200, blank=True, null=True)
-         title_image_finace = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
+         image_finace = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
          Title_name_service = models.CharField(max_length=200, blank=True, null=True)
-         title_image_service = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
+         image_service = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
          Title_name_planning = models.CharField(max_length=200, blank=True, null=True)
-         title_image_planning = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
+         image_planning = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
          unity = models.TextField(blank=True,null=True)
 
 class Home(models.Model):
@@ -92,14 +90,6 @@ class Home(models.Model):
          Description_busim = models.CharField(max_length=200, blank=True, null=True)
          testim_image_busim = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
 
-
-
-class Agriculture(models.Model):
-         title = models.CharField(max_length=200,null=True)
-         content = models.TextField(max_length=500,blank=True,null=True)
-         featured_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
-
-
 class Budget_finance(models.Model):
          bg_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)         
          mandate_para = models.TextField(blank=True,null=True)
@@ -117,8 +107,60 @@ class Budget_finance(models.Model):
          content_p11 = models.TextField(blank=True,null=True)
          content_p12 = models.TextField(blank=True,null=True)
 
-         
+class sanitation(models.Model):
+         sani_para = models.TextField(blank=True,null=True)
+         bg_image_sani = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)         
+         Desc_tips = models.TextField(blank=True,null=True)
+         Sub_Desc_tips = models.TextField(blank=True,null=True)
+         Tips1 = models.TextField(blank=True,null=True)
+         Tips2 = models.TextField(blank=True,null=True)
+         Tips3 = models.TextField(blank=True,null=True)
 
+class education(models.Model):
+         educat_para = models.TextField(blank=True,null=True)
+         bg_image_educat = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)         
+         Desc_tips = models.TextField(blank=True,null=True)
+         Sub_Desc_tips = models.TextField(blank=True,null=True)
+         Tips1 = models.TextField(blank=True,null=True)
+         Tips2 = models.TextField(blank=True,null=True)
+         Tips3 = models.TextField(blank=True,null=True)
+         
+class health(models.Model):
+         hlth_para = models.TextField(blank=True,null=True)
+         bg_image_hlth = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)         
+         Desc_tips = models.TextField(blank=True,null=True)
+         Sub_Desc_tips = models.TextField(blank=True,null=True)
+         Tips1 = models.TextField(blank=True,null=True)
+         Tips2 = models.TextField(blank=True,null=True)
+         Tips3 = models.TextField(blank=True,null=True)
+
+class agriculture(models.Model):
+         agric_para = models.TextField(blank=True,null=True)
+         bg_image_agric = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)         
+         Desc_tips = models.TextField(blank=True,null=True)
+         Sub_Desc_tips = models.TextField(blank=True,null=True)
+         Tips1 = models.TextField(blank=True,null=True)
+         Tips2 = models.TextField(blank=True,null=True)
+         Tips3 = models.TextField(blank=True,null=True)
+
+class community(models.Model):
+         comu_para = models.TextField(blank=True,null=True)
+         bg_image_comu = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)         
+         Desc_tips = models.TextField(blank=True,null=True)
+         Sub_Desc_tips = models.TextField(blank=True,null=True)
+         Tips1 = models.TextField(blank=True,null=True)
+         Tips2 = models.TextField(blank=True,null=True)
+         Tips3 = models.TextField(blank=True,null=True)
+
+class land(models.Model):
+         land_para = models.TextField(blank=True,null=True)
+         bg_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)         
+         Desc_tips = models.TextField(blank=True,null=True)
+         Sub_Desc_tips = models.TextField(blank=True,null=True)
+         Tips1 = models.TextField(blank=True,null=True)
+         Tips2 = models.TextField(blank=True,null=True)
+         Tips3 = models.TextField(blank=True,null=True)
+   
 class ceo(models.Model):
          bg_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)         
          mandate_para = models.TextField(blank=True,null=True)
@@ -155,13 +197,6 @@ class chairman(models.Model):
          content_p12 = models.TextField(blank=True,null=True)
          content_p13 = models.TextField(blank=True,null=True)
 
-
-class Community(models.Model):
-         title = models.CharField(max_length=200,null=True)
-         content = models.TextField(max_length=500,blank=True,null=True)
-         featured_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
-
-
 class ContactUS(models.Model):
          
          name = models.CharField(max_length=50, blank=True, null=True)
@@ -192,7 +227,7 @@ class IntpartnerUS(models.Model):
          #Created_Date = models.DateField(auto_now_add=True)
 
 
-class councilmembers(models.Model):
+class Staffs_of_Council(models.Model):
          bg_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)         
          name_chair = models.CharField(max_length=200, blank=True, null=True)
          title_image_chair = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
@@ -238,7 +273,7 @@ class councilmembers(models.Model):
          title_image_acc = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
          Title_name_acc = models.CharField(max_length=200,null=True)
 
-         name_plumb= models.CharField(max_length=200, blank=True, null=True)
+         name_plumb = models.CharField(max_length=200, blank=True, null=True)
          title_image_plumb = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
          Title_name_plumb = models.CharField(max_length=200,null=True)
 
@@ -257,11 +292,6 @@ class councilmembers(models.Model):
          name_mason= models.CharField(max_length=200, blank=True, null=True)
          title_image_mason = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
          Title_name_mason = models.CharField(max_length=200, blank=True,null=True)
-
-class Education(models.Model):
-         title = models.CharField(max_length=200,null=True)
-         content = models.TextField(max_length=500,blank=True,null=True)
-         featured_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
 
 class projects(models.Model):
          bag_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
@@ -298,32 +328,7 @@ class projects(models.Model):
 
          content_price  = models.TextField(blank=True,null=True)
 
-
-
-class Fearture(models.Model):
-         title = models.CharField(max_length=200,null=True)
-         content = models.TextField(max_length=500,blank=True,null=True)
-         featured_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
-
-
-
-class Health(models.Model):
-         title = models.CharField(max_length=200,null=True)
-         content = models.TextField(max_length=500,blank=True,null=True)
-         featured_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
-
-class IntPartner(models.Model):
-         title = models.CharField(max_length=200,null=True)
-         content = models.TextField(max_length=500,blank=True,null=True)
-         featured_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
-
-class Land(models.Model):
-         title = models.CharField(max_length=200,null=True)
-         content = models.TextField(max_length=500,blank=True,null=True)
-         featured_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
-
-         
-
+      
 class mission_and_vission(models.Model):
          bg_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
          vission = models.TextField(blank=True,null=True)
@@ -416,18 +421,15 @@ class Powers_and_Functions (models.Model):
 
          
 
-class Project(models.Model):
-         title = models.CharField(max_length=200,null=True)
-         content = models.TextField(max_length=500,blank=True,null=True)
-         featured_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
-
-         
-
 class Publication(models.Model):
          title = models.CharField(max_length=200,null=True)
          content = models.TextField(max_length=500,blank=True,null=True)
          featured_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
 
+class IntPartner(models.Model):
+         title = models.CharField(max_length=200,null=True)
+         content = models.TextField(max_length=500,blank=True,null=True)
+         featured_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
 
 class Rates_and_Taxes(models.Model):
          pRates = models.TextField(blank=True,null=True)
@@ -457,27 +459,9 @@ class Rates_and_Taxes(models.Model):
          Land_Transfer = models.TextField(blank=True,null=True)
          conflick_Resolution = models.TextField(blank=True,null=True)
          Land_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
+   
 
-class Sanitation(models.Model):
-         title = models.CharField(max_length=200,null=True)
-         content = models.TextField(max_length=500,blank=True,null=True)
-         featured_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
-
-
-class Service(models.Model):
-         title = models.CharField(max_length=200,null=True)
-         content = models.TextField(max_length=500,blank=True,null=True)
-         featured_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
-
-
-class Services(models.Model):
-         title = models.CharField(max_length=200,null=True)
-         content = models.TextField(max_length=500,blank=True,null=True)
-         featured_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
-
-        
-
-class Staffs_of_Council(models.Model):
+class councilmembers (models.Model):
          bg_image = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
          name_chair = models.CharField(max_length=200, blank=True, null=True)
          title_image_chair = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
@@ -535,7 +519,7 @@ class Team(models.Model):
 
         
 
-class TestiM(models.Model):
+class testimonial(models.Model):
          image_words_pple = models.ImageField(upload_to='img/%Y/%m/%d/', blank=True, null=True)
          Testim_name_teacher = models.CharField(max_length=200, blank=True, null=True)
          words_teach = models.TextField(blank=True,null=True)

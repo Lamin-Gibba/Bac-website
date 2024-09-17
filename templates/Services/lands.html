@@ -154,7 +154,7 @@
             </div>
         </div>
 <!-- Header End-->   
-
+{% for post in posts %}
   <!-- Top Feature Start -->
     <div class="container-fluid top-feature py-5 pt-lg-0">
         <div class="container py-5 pt-lg-0">
@@ -203,25 +203,25 @@
     </div>
     <!-- Top Feature End -->
 
-<div class="container-fluid facts quote my-5 py-5" data-parallax="scroll" data-image-src="{% static 'img/land-2.jpeg' %} ">
+<div class="container-fluid facts quote my-5 py-5" data-parallax="scroll" data-image-src="{{post.bg_image.url}} ">
 <!-- Features Start -->
 <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
                 <h1 class="display-5 mb-5 text-white" >Embrace the Epicenter of Land Management Initiatives in Basse Area Councils</h1>
-                <p class="fs-5 fw-bold text-white" id="colour">Explore the core of land stewardship in Basse Area Councils, where the Council is devoted to nurturing a dynamic environment that empowers residents and strengthens our ties to the land. Uncover the array of initiatives embarked upon by the council, shaping sustainable land practices and enhancing the standards of land management in Basse.</p>
+                <p class="fs-5 fw-bold text-white" id="colour">{{post.land_para}}</p>
     </div>
 </div>
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <p class="fs-5 fw-bold" id="colour">Forging the Path of Sustainable Land Management in Basse Area Council</p>
-                <h1 class="display-5 mb-4">Harmonizing Practices in Land Stewardship</h1> </p>
+                <p class="fs-5 fw-bold" id="colour">{{post.Desc_tips}}</p>
+                <h1 class="display-5 mb-4">{{post.Sub_Desc_tips}}</h1> </p>
                 <ul style="color: #15233C;">
-                <li style="text-align: justify;">Land initiatives serve as the cornerstone, weaving a legacy that propels our community towards thriving sustainability. The Basse Area Council takes immense pride in cultivating this heritage of land dedication, ensuring not only its preservation but also its dynamic evolution. Our commitment to land excellence is deeply rooted in the belief that access to sustainable practices is essential for personal empowerment and the collective advancement of our community.</li><br>
+                    <li style="text-align: justify;">{{post.Tips1}}</li><br>
 
-                <li style="text-align: justify;">In the face of resource constraints, our land initiatives resonate with an unwavering dedication to shaping contemporary land landscapes. Acknowledging the developmental challenges, the council strives to enhance existing facilities, aspiring to provide sustainable practices. Thoughtful enhancements create an environment conducive to efficient land practices, with the aim of offering residents spaces that inspire conservation, foster innovation, and instill a commitment to land well-being.</li> <br>
-
-                <li style="text-align: justify;"> This dedication reaches beyond the boundaries of land centers. Through innovative land awareness campaigns, workshops, and training sessions, we proactively involve residents, families, and the broader community. The Basse Area Council envisions land services as a holistic venture, fostering not only service excellence but also environmental sustainability and community unity. Together, we are shaping the next phase of Basse's land legacy, guaranteeing that each individual has the tools and opportunities to lead a sustainable life and make a meaningful contribution to our shared land destiny.</li>
+                    <li style="text-align: justify;">{{post.Tips2}}</li> <br>
+    
+                    <li style="text-align: justify; ">{{post.Tips1}}</li>
             </ul>
 
                 <a class="btn btn-primary py-3 px-4" target="_blank" href="{% url 'Contact' %}" id="button-update">Be In Touch</a>
@@ -405,7 +405,7 @@
         </div>
     </div>
     <!-- Service End -->
-
+{% endfor %}
 
 <iframe class="wow fadeInUp" data-wow-delay="0.1s" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7765.292016401651!2d-14.22235261648895!3d13.310039424409007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xeef83a2a967a7ff%3A0x197d5cb4f7ab4a89!2sBasse%20Area%20Council!5e0!3m2!1sen!2sgm!4v1695157686294!5m2!1sen!2sgm" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 

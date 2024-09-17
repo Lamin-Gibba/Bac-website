@@ -165,7 +165,7 @@
 <!-- Page Header End -->
 
 
-
+{% for post in posts %}
 <!-- Team Start -->
 <div class="container-fluid py-5">
     <div class="container" style="max-width: 100%;">
@@ -177,14 +177,14 @@
             <!-- Team Member 1 -->
             <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-item">
-                    <img class="img-fluid" src="{% static 'img/chairm.jpg' %}" alt="">
+                    <img class="img-fluid" src="{{post.title_image_chair.url}}" alt="">
                     <div class="d-flex">
                         <div class="flex-shrink-0 btn-square" style="width: 90px; height: 90px;">
                             <i class="fa fa-2x fa-share text-white"></i>
                         </div>
                         <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
-                            <h6>Mahamadou Ceesay</h6>
-                            <span class="" id="colour">Basse area council Chairman</span>
+                            <h6>{{post.name_chair}}</h6>
+                            <span class="" id="colour">{{post.Title_name_chair}}</span>
                             <div class="team-social">
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-twitter"></i></a>
@@ -198,14 +198,14 @@
             <!-- Team Member 2 -->
             <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="team-item">
-                    <img class="img-fluid" src="{% static 'img/danjo.jpg' %}" alt="">
+                    <img class="img-fluid" src="{{post.title_image_Vchair.url}}" alt="">
                     <div class="d-flex">
                         <div class="flex-shrink-0 btn-square" style="width: 90px; height: 90px;">
                             <i class="fa fa-2x fa-share text-white"></i>
                         </div>
                         <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
-                            <h6>Abubacarr M. Danjo</h6>
-                            <span class="" id="colour">Sare Ngai Ward (Vice Chairman)</span>
+                            <h6>{{post.name_vchair}}</h6>
+                            <span class="" id="colour">{{post.ward_vchair}}</span>
                             <div class="team-social">
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-twitter"></i></a>
@@ -218,14 +218,14 @@
 <!-- Team Member 3 -->
             <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="team-item">
-                    <img class="img-fluid" src="{% static 'img/Diabugu1.jpg' %}" alt="">
+                    <img class="img-fluid" src="{{post.image3.url}}" alt="">
                     <div class="d-flex">
                         <div class="flex-shrink-0 btn-square" style="width: 90px; height: 90px;">
                             <i class="fa fa-2x fa-share text-white"></i>
                         </div>
                         <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
-                            <h6>Sellou</h6>
-                            <span class="" id="colour">Diabugu Ward</span>
+                            <h6>{{post.name3}}</h6>
+                            <span class="" id="colour">{{post.ward3}}</span>
                             <div class="team-social">
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-twitter"></i></a>
@@ -239,14 +239,14 @@
 <!-- Team Member 4 -->
             <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="team-item">
-                    <img class="img-fluid" src="{% static 'img/sabi.jpg' %}" alt="">
+                    <img class="img-fluid" src="{{post.image4.url}}" alt="">
                     <div class="d-flex">
                         <div class="flex-shrink-0 btn-square" style="width: 90px; height: 90px;">
                             <i class="fa fa-2x fa-share text-white"></i>
                         </div>
                         <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
-                            <h6>Abubacarr Marico </h6>
-                            <span class="" id="colour">Sabi Ward</span>
+                            <h6>{{post.name4}} </h6>
+                            <span class="" id="colour">{{post.ward4}}</span>
                             <div class="team-social">
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-twitter"></i></a>
@@ -260,14 +260,14 @@
 <!-- Team Member 5 -->
             <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-item">
-                    <img class="img-fluid" src="{% static 'img/sutuk.jpg' %}" alt="">
+                    <img class="img-fluid" src="{{post.image5.url}}" alt="">
                     <div class="d-flex">
                         <div class="flex-shrink-0 btn-square" style="width: 90px; height: 90px;">
                             <i class="fa fa-2x fa-share text-white"></i>
                         </div>
                         <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
-                            <h6>Mawdo Sisawo</h6>
-                            <span class="" id="colour">Sutukonding Ward</span>
+                            <h6>{{post.name5}}</h6>
+                            <span class="" id="colour">{{post.ward5}}</span>
                             <div class="team-social">
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-twitter"></i></a>
@@ -281,14 +281,14 @@
 <!-- Team Member 6 -->
             <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="team-item">
-                    <img class="img-fluid" src="{% static 'img/sister.jpg' %}" alt="">
+                    <img class="img-fluid" src="{{post.image6.url}}" alt="">
                     <div class="d-flex">
                         <div class="flex-shrink-0 btn-square" style="width: 90px; height: 90px;">
                             <i class="fa fa-2x fa-share text-white"></i>
                         </div>
                         <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
-                            <h6>Tala Camara</h6>
-                            <span class="" id="colour">Youths Rep</span>
+                            <h6>{{post.name6}}</h6>
+                            <span class="" id="colour">{{post.ward6}}</span>
                             <div class="team-social">
                                <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-twitter"></i></a>
@@ -302,14 +302,14 @@
 <!-- Team Member 7 -->
             <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="team-item">
-                    <img class="img-fluid" src="{% static 'img/koina.jpg' %}" alt="">
+                    <img class="img-fluid" src="{{post.image7.url}}" alt="">
                     <div class="d-flex">
                         <div class="flex-shrink-0 btn-square" style="width: 90px; height: 90px;">
                             <i class="fa fa-2x fa-share text-white"></i>
                         </div>
                         <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
-                            <h6>Sanna Sanyang</h6>
-                            <span class="" id="colour">Koina Ward</span>
+                            <h6>{{post.name7}}</h6>
+                            <span class="" id="colour">{{post.ward7}}</span>
                             <div class="team-social">
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-twitter"></i></a>
@@ -322,14 +322,14 @@
 <!-- Team Member 8 -->
             <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="team-item">
-                    <img class="img-fluid" src="{% static 'img/disable.jpg' %}" alt="">
+                    <img class="img-fluid" src="{{post.image8.url}}" alt="">
                     <div class="d-flex">
                         <div class="flex-shrink-0 btn-square" style="width: 90px; height: 90px;">
                             <i class="fa fa-2x fa-share text-white"></i>
                         </div>
                         <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
-                            <h6>Fatoumatta Fatty</h6>
-                            <span class="" id="colour">Disable Rep.</span>
+                            <h6>{{post.name8}}</h6>
+                            <span class="" id="colour">{{post.ward8}}</span>
                             <div class="team-social">
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-twitter"></i></a>
@@ -343,14 +343,14 @@
 <!-- Team Member 9 -->
             <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-item">
-                    <img class="img-fluid" src="{% static 'img/damphak.jpg' %}" alt="">
+                    <img class="img-fluid" src="{{post.image9.url}}" alt="">
                     <div class="d-flex">
                         <div class="flex-shrink-0 btn-square" style="width: 90px; height: 90px;">
                             <i class="fa fa-2x fa-share text-white"></i>
                         </div>
                         <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
-                            <h6>Tamba Kanuteh</h6>
-                            <span class="" id="colour">Dampha Kunda Ward</span>
+                            <h6>{{post.name9}}</h6>
+                            <span class="" id="colour">{{post.ward9}}</span>
                             <div class="team-social">
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-twitter"></i></a>
@@ -364,14 +364,14 @@
 <!-- Team Member 10 -->
             <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="team-item">
-                    <img class="img-fluid" src="{% static 'img/bassej.jpg' %}" alt="">
+                    <img class="img-fluid" src="{{post.image10.url}}" alt="">
                     <div class="d-flex">
                         <div class="flex-shrink-0 btn-square" style="width: 90px; height: 90px;">
                             <i class="fa fa-2x fa-share text-white"></i>
                         </div>
                         <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
-                            <h6>Ejatou Jallow</h6>
-                            <span class="" id="colour">Basse Ward</span>
+                            <h6>{{post.name10}}</h6>
+                            <span class="" id="colour">{{post.ward10}}</span>
                             <div class="team-social">
                                <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-twitter"></i></a>
@@ -385,14 +385,14 @@
 <!-- Team Member 11 -->
             <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="team-item">
-                    <img class="img-fluid" src="{% static 'img/fodayk.jpg' %}" alt="">
+                    <img class="img-fluid" src="{{post.image11.url}}" alt="">
                     <div class="d-flex">
                         <div class="flex-shrink-0 btn-square" style="width: 90px; height: 90px;">
                             <i class="fa fa-2x fa-share text-white"></i>
                         </div>
                         <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
-                            <h6>Musa Danso</h6>
-                            <span class="" id="colour">Foday Kunda Ward</span>
+                            <h6>{{post.name11}}</h6>
+                            <span class="" id="colour">{{post.ward11}}</span>
                             <div class="team-social">
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-twitter"></i></a>
@@ -406,14 +406,14 @@
 <!-- Team Member 12 -->
             <div class="col-lg-3 col-md-4 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="team-item">
-                    <img class="img-fluid" src="{% static 'img/bajak.jpg' %}" alt="">
+                    <img class="img-fluid" src="{{post.image12.url}}" alt="">
                     <div class="d-flex">
                         <div class="flex-shrink-0 btn-square" style="width: 90px; height: 90px;">
                             <i class="fa fa-2x fa-share text-white"></i>
                         </div>
                         <div class="position-relative overflow-hidden bg-light d-flex flex-column justify-content-center w-100 ps-4" style="height: 90px;">
-                            <h6>Alagie Trawally</h6>
-                            <span class="" id="colour">Baja Kunda Ward</span>
+                            <h6>{{post.name12}}</h6>
+                            <span class="" id="colour">{{post.ward12}}</span>
                             <div class="team-social">
                                <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square btn-dark rounded-circle mx-1" href="" id="button-update"><i class="fab fa-twitter"></i></a>
@@ -445,7 +445,7 @@
             </div>
         </div>
         <!-- Banner End -->
-
+{% endfor %}
     <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">

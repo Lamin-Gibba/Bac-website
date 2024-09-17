@@ -175,7 +175,7 @@
             <div class="col-lg-6 p-0">
                 <div class="row gx-3 h-100">
                     <div class="col-12 align-self-end wow fadeInDown" data-wow-delay="0.1s">
-                        <img class="img-fluid w-100" src="{% static 'img/about-03.jpg' %}" id="image-edit">
+                        <img class="img-fluid w-100" src="{{post.image_about.url}}" id="image-edit">
 
                     </div>
                 </div>
@@ -287,7 +287,7 @@
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item">
-                        <img class="img-fluid" src="{% static 'img/team-1.jpg' %}" alt="">
+                        <img class="img-fluid" src="{{post.image_chairm.url}}" alt="">
                         <div class="d-flex">
                             <div class="flex-shrink-0 btn-square" style="width: 90px; height: 90px;">
                                 <i class="fa fa-2x fa-share text-white"></i>
@@ -306,7 +306,8 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item">
-                        <img class="img-fluid" src="{% static 'img/danjo.jpg' %}" alt="">                        <div class="d-flex">
+                        <img class="img-fluid" src="{{post.image_vice.url}}" alt="">
+                        <div class="d-flex">                      
                             <div class="flex-shrink-0 btn-square" style="width: 90px; height: 90px;">
                                 <i class="fa fa-2x fa-share text-white"></i>
                             </div>
@@ -324,7 +325,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item">
-                        <img class="img-fluid" src="{% static 'img/Profile Empty.jpg' %}" alt="">
+                        <img class="img-fluid" src="{{post.image_ceo.url}}" alt="">
                         <div class="d-flex">
                             <div class="flex-shrink-0 btn-square" style="width: 90px; height: 90px;">
                                 <i class="fa fa-2x fa-share text-white"></i>
@@ -344,7 +345,7 @@
                             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item">
-                        <img class="img-fluid" src="{% static 'img/finance.jpg' %}" alt="">
+                        <img class="img-fluid" src="{{post.image_finace.url}}" alt="">
                         <div class="d-flex">
                             <div class="flex-shrink-0 btn-square" style="width: 90px; height: 90px;">
                                 <i class="fa fa-2x fa-share text-white"></i>
@@ -363,7 +364,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item">
-                        <img class="img-fluid" id="Abimg5" src="{% static 'img/plannin.jpg' %}" alt="">
+                        <img class="img-fluid" id="Abimg5" src="{{post.image_planning.url}}" alt="">
                         <div class="d-flex">
                             <div class="flex-shrink-0 btn-square" style="width: 90px; height: 90px;">
                                 <i class="fa fa-2x fa-share text-white"></i>
@@ -382,7 +383,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item">
-                        <img class="img-fluid" id="Abimg6" src="{% static 'img/service.jpg' %}" alt="">
+                        <img class="img-fluid" id="Abimg6" src="{{post.image_service.url}}" alt="">
                         <div class="d-flex">
                             <div class="flex-shrink-0 btn-square" style="width: 90px; height: 90px;">
                                 <i class="fa fa-2x fa-share text-white"></i>
